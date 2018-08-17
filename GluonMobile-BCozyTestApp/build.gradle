@@ -1,0 +1,151 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url 'http://nexus.gluonhq.com/nexus/content/repositories/releases'
+        }
+        maven { url "https://mvn.cit-ec.de/nexus/content/repositories/releases" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'org.javafxports:jfxmobile-plugin:1.3.10'
+    }
+}
+
+apply plugin: 'org.javafxports.jfxmobile'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url 'http://nexus.gluonhq.com/nexus/content/repositories/releases'
+    }
+    maven { url "https://mvn.cit-ec.de/nexus/content/repositories/releases" }
+    mavenLocal()
+}
+
+mainClassName = 'org.openbase.bco.bcozy.test.GluonApplication'
+
+dependencies {
+    compile('com.gluonhq:charm:4.4.1')
+
+    // https://mvnrepository.com/artifact/org.openbase.bco/bcozy
+    compile(group: 'org.openbase', name: 'bco.bcozy', version: '2.0-SNAPSHOT') {
+        exclude group: 'com.fasterxml.jackson.core'
+        exclude group: 'org.objenesis.objenisis'
+        exclude group: 'org.fusesource.jansi'
+        exclude group: 'ch.qos.logback'
+        exclude group: 'org.slf4j'
+        exclude group: 'org.apache.maven.plugins'
+//        exclude group: 'commons-io'
+        transitive = true
+    }
+
+    compile(group: 'com.guigarage', name: 'responsivefx', version: '0.8')
+
+    compile(group: 'de.jensd', name: 'fontawesomefx', version: '8.9')
+    // https://mvnrepository.com/artifact/org.openbase/jul.visual.javafx
+//    compile group: 'org.openbase', name: 'jul.visual.javafx', version: '1.6.3')
+//    compile group: 'org.openbase', name: 'jul.extension.rsb', version: '1.6.3')
+
+
+//    compile(group: 'org.controlsfx', name: 'controlsfx', version: '8.40.12')
+//    compile(group: 'org.openbase', name: 'jul.extension.rct', version: '1.6.3')
+//    compile(group: 'org.openbase', name: 'jul.schedule', version: '1.6.3')
+
+    compile(group: 'org.openbase', name: 'bco.dal.remote', version: '2.0-SNAPSHOT') {
+        exclude group: 'com.fasterxml.jackson.core'
+        exclude group: 'org.objenesis.objenisis'
+        exclude group: 'org.fusesource.jansi'
+        exclude group: 'ch.qos.logback'
+        exclude group: 'org.slf4j'
+        exclude group: 'org.apache.maven.plugins'
+        exclude group: 'commons-io'
+    }
+
+//    desktopCompile(group: 'org.openbase.bco', name: 'dal.remote', version: '1.6.3') {
+//        exclude group: 'com.fasterxml.jackson.core'
+//        exclude group: 'org.objenesis.objenisis'
+//        exclude group: 'org.apache.maven.plugins'
+//        exclude group: 'commons-io'
+//    }
+
+//    compile(group: 'rsb', name: 'rsb', version: '0.17.3')
+//    compile(group: 'rsb', name: 'rst', version: '0.17.4')
+//    compile(group: 'rsb', name: 'rst-experimental', version: '0.17.13')
+//    compile(group: 'de.citec.csra', name: 'rta-lib', version: '1.0.3')
+
+    compile(group: 'org.slf4j', name: 'slf4j-android', version: '1.7.25')
+}
+
+android {
+//    compileSdkVersion 27
+//    defaultConfig {
+//        applicationId "org.openbase.bco.bcozy"
+//        minSdkVersion 27
+//        targetSdkVersion 27
+//        versionCode 1
+//        versionName "1.0"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        multiDexEnabled true
+//    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+//    dexOptions {
+//        javaMaxHeapSize "4g"
+//    }
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+//
+//    lintOptions {
+//        abortOnError false
+//    }
+//    packagingOptions {
+//        exclude 'META-INF/LICENSE'
+//    }
+//
+}
+
+jfxmobile {
+    downConfig {
+        version = '3.7.0'
+        // Do not edit the line below. Use Gluon Mobile Settings in your project context menu instead
+        plugins 'display', 'lifecycle', 'statusbar', 'storage'
+    }
+    android {
+        manifest = 'src/android/AndroidManifest.xml'
+        compileSdkVersion = 28
+        minSdkVersion = 26
+        targetSdkVersion = 28
+
+        dexOptions {
+            javaMaxHeapSize = "4g"
+        }
+        packagingOptions {
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/INDEX.LIST'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/DEPENDENCIES'
+        }
+    }
+    ios {
+        infoPList = file('src/ios/Default-Info.plist')
+        forceLinkClasses = [
+                'com.gluonhq.**.*',
+                'javax.annotations.**.*',
+                'javax.inject.**.*',
+                'javax.json.**.*',
+                'org.glassfish.json.**.*'
+        ]
+    }
+}

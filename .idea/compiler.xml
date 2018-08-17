@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="GluonMobile-BCozyTestApp_android" target="1.8" />
+      <module name="GluonMobile-BCozyTestApp_desktop" target="1.8" />
+      <module name="GluonMobile-BCozyTestApp_embedded" target="1.8" />
+      <module name="GluonMobile-BCozyTestApp_ios" target="1.8" />
+      <module name="GluonMobile-BCozyTestApp_main" target="1.8" />
+      <module name="GluonMobile-BCozyTestApp_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

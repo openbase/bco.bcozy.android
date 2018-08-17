@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp.iml" filepath="$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp.iml" group="GluonMobile-BCozyTestApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_android.iml" filepath="$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_android.iml" group="GluonMobile-BCozyTestApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_desktop.iml" group="GluonMobile-BCozyTestApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_embedded.iml" filepath="$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_embedded.iml" group="GluonMobile-BCozyTestApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_ios.iml" filepath="$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_ios.iml" group="GluonMobile-BCozyTestApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_main.iml" group="GluonMobile-BCozyTestApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/1310536302/GluonMobile-BCozyTestApp_test.iml" group="GluonMobile-BCozyTestApp" />
+      <module fileurl="file://$PROJECT_DIR$/../../openbase/bco.bcozy.glutontest/bco.bcozy.glutontest.iml" filepath="$PROJECT_DIR$/../../openbase/bco.bcozy.glutontest/bco.bcozy.glutontest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-524364321/csra-GluonMobile-BCozyTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-524364321/csra-GluonMobile-BCozyTest.iml" />
+    </modules>
+  </component>
+</project>
